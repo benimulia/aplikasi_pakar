@@ -1,0 +1,12 @@
+akun admin sistem pakar diagnosa penakit gigi dan mulut
+
+email    : admin@admin.com
+password : 12345678
+
+pasien email : pasien@pasien.com
+password     : 12345679
+
+
+1. buat data base bernama laravel_pakar
+2. jalankan perintah php artisan migrate.
+3. atau langsung mengimport data base mysql
