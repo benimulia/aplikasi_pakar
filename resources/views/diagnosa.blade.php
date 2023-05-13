@@ -109,7 +109,7 @@
                                     <p><strong> Anda Menderita Penyakit (<u> {{ $diagnosa->penyakit->nama }}</u>).</strong></p>
                                     <div class="row">
                                         <div class="col-md-10">
-                                            <label>Tingkat keseriusan penyakit : <b>{{ $diagnosa->persentase }}%</b></label>
+                                            <label>Persentase penyakit : <b>{{ $diagnosa->persentase }}%</b></label>
                                         </div>
                                     </div>
                                     <div class="row">

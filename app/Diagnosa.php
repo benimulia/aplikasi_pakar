@@ -10,8 +10,6 @@ class Diagnosa extends Model
 
     protected $fillable = ['pasien_id', 'penyakit_id', 'persentase'];
 
-    public $timestamps = false;
-
     public function penyakit() {
     	return $this->belongsTo('App\Penyakit');
     }

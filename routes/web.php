@@ -35,7 +35,7 @@ Route::get('/gejala', 'GejalaController@index');
 #konsutasi
 Route::get('/konsultasi', 'KonsultasiController@pasienForm')->name('pasienForm');
 Route::post('/konsultasi', 'KonsultasiController@storePasien')->name('storePasien');
-Route::post('/konsulltasi/diagnosa', 'KonsultasiController@diagnosa')->name('diagnosa');
+Route::post('/konsulltasi/diagnosa', 'KonsultasiController@diagnosabayes')->name('diagnosa');
 Route::get('/konsultasi/{pasien_id}/hasil', 'KonsultasiController@hasilDiagnosa')->name('hasilDiagnosa');
 
 #print
