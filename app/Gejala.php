@@ -10,11 +10,20 @@ class Gejala extends Model
 
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
-    public function penyakit() {
-    	return $this->belongsToMany('App\Penyakit', 'aturan');
+    public function penyakit()
+    {
+        return $this->belongsToMany('App\Penyakit', 'aturan');
     }
 
-    public function pasien() {
-    	return $this->belongsToMany('App\Pasien', 'tmp_gejala');
+    public function pasien()
+    {
+        return $this->belongsToMany('App\Pasien', 'tmp_gejala');
     }
+
+    public function basecasegejala()
+    {
+        return $this->hasMany(BaseCaseGejala::class, 'gejala_id', 'id');
+    }
+
+
 }

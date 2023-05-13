@@ -72,6 +72,11 @@
           <span>Data Gejala </span></a>
       </li>
       <li class="nav-item active">
+        <a class="nav-link" href="/dashboard/basecase">
+          <i class="fas fa-clipboard-list"></i>
+          <span>Data Base Case </span></a>
+      </li>
+      <li class="nav-item active">
         <a class="nav-link" href="/solusi">
           <i class="fas fa-clipboard-list"></i>
           <span>Data solusi </span></a>

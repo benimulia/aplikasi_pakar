@@ -47,6 +47,7 @@ Route::get('/konsultasi/{pasien_id}/hasil', 'KonsultasiController@hasilDiagnosa'
 //penyakit dan gejala
 Route::resource('dashboard/gejala', 'Dashboard\GejalaController');
 Route::resource('dashboard/penyakit', 'Dashboard\PenyakitController');
+Route::resource('dashboard/basecase', 'Dashboard\BaseCaseController');
 
 #pasien
 Route::get('dashboard/pasien','PasienController@index');
