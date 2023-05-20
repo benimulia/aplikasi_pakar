@@ -157,15 +157,40 @@ class KonsultasiController extends Controller
         // mendapatkan penyakit_id dengan probabilitas tertinggi
         $penyakit_tertinggi = $posterior_probs[0]['penyakit_id'];
         $prob_tertinggi = $posterior_probs[0]['probabilitas'];
-        $persen_prob = $prob_tertinggi * 100;
+        $persen_prob = $prob_tertinggi * 100;        
 
-        Diagnosa::create([
-            'pasien_id' => $pasien_id,
-            'penyakit_id' => $penyakit_tertinggi,
-            'persentase' => $persen_prob
-        ]);
+        DB::beginTransaction();
 
-        return redirect()->route('hasilDiagnosa', $pasien_id);
+        try {
+            Diagnosa::create([
+                'pasien_id' => $pasien_id,
+                'penyakit_id' => $penyakit_tertinggi,
+                'persentase' => $persen_prob
+            ]);
+
+            $basecase = new BaseCase();
+            $basecase->penyakit_id = $penyakit_tertinggi;
+            $basecase->save();
+
+            $id_basecase = DB::table('base_case')->orderBy('id', 'DESC')->select('id')->first();
+            $id_basecase = $id_basecase->id;
+
+            foreach ($gejala_input as $key => $items) {
+
+                $basecasegejala['gejala_id'] = $items;
+                $basecasegejala['base_case_id'] = $id_basecase;
+
+                BaseCaseGejala::create($basecasegejala);
+            }
+
+            DB::commit();
+            return redirect()->route('hasilDiagnosa', $pasien_id);;
+        } catch (Exception $e) {
+            DB::rollback();
+            return redirect()->back()->with('fail', 'Gagal menambahkan data');
+        }
+
+        
     }
 
     private function hitungPersen($pasien_id)
