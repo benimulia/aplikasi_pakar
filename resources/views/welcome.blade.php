@@ -215,7 +215,7 @@
 					<i class="icofont-quote-right"></i>
 
 					<div class="testimonial-thumb">
-						<img src="{{asset('user/images/team/test-thumb1.jpg')}}" alt="" class="img-fluid">
+						<img src="{{asset('userx/images/team/test-thumb1.jpg')}}" alt="" class="img-fluid">
 					</div>
 
 					<div class="client-info ">
@@ -229,7 +229,7 @@
 
 				<div class="testimonial-block style-2  gray-bg">
 					<div class="testimonial-thumb">
-						<img src="{{asset('user/images/team/test-thumb2.jpg')}}" alt="" class="img-fluid">
+						<img src="{{asset('userx/images/team/test-thumb2.jpg')}}" alt="" class="img-fluid">
 					</div>
 
 					<div class="client-info">
@@ -245,7 +245,7 @@
 
 				<div class="testimonial-block style-2  gray-bg">
 					<div class="testimonial-thumb">
-						<img src="{{asset('user/images/team/test-thumb3.jpg')}}" alt="" class="img-fluid">
+						<img src="{{asset('userx/images/team/test-thumb3.jpg')}}" alt="" class="img-fluid">
 					</div>
 
 					<div class="client-info">
@@ -261,7 +261,7 @@
 
 				<div class="testimonial-block style-2  gray-bg">
 					<div class="testimonial-thumb">
-						<img src="{{asset('user/images/team/test-thumb4.jpg')}}" alt="" class="img-fluid">
+						<img src="{{asset('userx/images/team/test-thumb4.jpg')}}" alt="" class="img-fluid">
 					</div>
 
 					<div class="client-info">
@@ -276,7 +276,7 @@
 
 				<div class="testimonial-block style-2  gray-bg">
 					<div class="testimonial-thumb">
-						<img src="{{asset('user/images/team/test-thumb1.jpg')}}" alt="" class="img-fluid">
+						<img src="{{asset('userx/images/team/test-thumb1.jpg')}}" alt="" class="img-fluid">
 					</div>
 
 					<div class="client-info">

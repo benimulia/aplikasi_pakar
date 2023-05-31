@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePenyakitTable extends Migration
+class CreateApotikTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreatePenyakitTable extends Migration
      */
     public function up()
     {
-        Schema::create('penyakit', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama');
-            $table->text('definisi');
-            $table->text('penyebab');
-
+        Schema::create('apotik', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nama_apotik');
+            $table->string('lat');
+            $table->string('lng');
+            $table->text('alamat');
+            $table->string('gambar');
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreatePenyakitTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('penyakit');
+        Schema::dropIfExists('apotik');
     }
 }

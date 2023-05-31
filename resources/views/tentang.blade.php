@@ -33,7 +33,7 @@
 					berdasarkan kasus penyakit usus yang sudah ada sebelumnya, sehingga aplikasi yang dibangun dapat mendiagnosis penyakit usus secara tepat.
                     Sistem ini juga dibekali fitur tempat-tempat lokasi klinik dan apotik yang dapat dijangkau calon pasien.
                 </p>
-				<img src="{{asset('user/images/about/sign.png')}}" alt="" class="img-fluid">
+				<img src="{{asset('userx/images/about/sign.png')}}" alt="" class="img-fluid">
 			</div>
 		</div>
 	</div>
@@ -44,28 +44,28 @@
 		<div class="row">
 			<div class="col-lg-3 col-md-6">
 				<div class="about-block-item mb-5 mb-lg-0">
-					<img src="{{asset('user/images/about/about-1.jpg')}}" alt="" class="img-fluid w-100">
+					<img src="{{asset('userx/images/about/about-1.jpg')}}" alt="" class="img-fluid w-100">
 					<h4 class="mt-3">Healthcare for Kids</h4>
 					<p>Voluptate aperiam esse possimus maxime repellendus, nihil quod accusantium .</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6">
 				<div class="about-block-item mb-5 mb-lg-0">
-					<img src="{{asset('user/images/about/about-2.jpg')}}" alt="" class="img-fluid w-100">
+					<img src="{{asset('userx/images/about/about-2.jpg')}}" alt="" class="img-fluid w-100">
 					<h4 class="mt-3">Medical Counseling</h4>
 					<p>Voluptate aperiam esse possimus maxime repellendus, nihil quod accusantium .</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6">
 				<div class="about-block-item mb-5 mb-lg-0">
-					<img src="{{asset('user/images/about/about-3.jpg')}}" alt="" class="img-fluid w-100">
+					<img src="{{asset('userx/images/about/about-3.jpg')}}" alt="" class="img-fluid w-100">
 					<h4 class="mt-3">Modern Equipments</h4>
 					<p>Voluptate aperiam esse possimus maxime repellendus, nihil quod accusantium .</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6">
 				<div class="about-block-item">
-					<img src="{{asset('user/images/about/about-4.jpg')}}" alt="" class="img-fluid w-100">
+					<img src="{{asset('userx/images/about/about-4.jpg')}}" alt="" class="img-fluid w-100">
 					<h4 class="mt-3">Qualified Doctors</h4>
 					<p>Voluptate aperiam esse possimus maxime repellendus, nihil quod accusantium .</p>
 				</div>
@@ -84,32 +84,32 @@
 				<div class="row">
 					<div class="col-lg-4 col-md-6 col-sm-6">
 						<div class="award-img">
-							<img src="{{asset('user/images/about/3.png')}}" alt="" class="img-fluid">
+							<img src="{{asset('userx/images/about/3.png')}}" alt="" class="img-fluid">
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-6 col-sm-6">
 						<div class="award-img">
-							<img src="{{asset('user/images/about/4.png')}}" alt="" class="img-fluid">
+							<img src="{{asset('userx/images/about/4.png')}}" alt="" class="img-fluid">
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-6 col-sm-6">
 						<div class="award-img">
-							<img src="{{asset('user/images/about/1.png')}}" alt="" class="img-fluid">
+							<img src="{{asset('userx/images/about/1.png')}}" alt="" class="img-fluid">
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-6 col-sm-6">
 						<div class="award-img">
-							<img src="{{asset('user/images/about/2.png')}}" alt="" class="img-fluid">
+							<img src="{{asset('userx/images/about/2.png')}}" alt="" class="img-fluid">
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-6 col-sm-6">
 						<div class="award-img">
-							<img src="{{asset('user/images/about/5.png')}}" alt="" class="img-fluid">
+							<img src="{{asset('userx/images/about/5.png')}}" alt="" class="img-fluid">
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-6 col-sm-6">
 						<div class="award-img">
-							<img src="{{asset('user/images/about/6.png')}}" alt="" class="img-fluid">
+							<img src="{{asset('userx/images/about/6.png')}}" alt="" class="img-fluid">
 						</div>
 					</div>
 				</div>

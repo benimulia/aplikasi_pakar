@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Diagnosa extends Migration
+class CreatePasienTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,14 @@ class Diagnosa extends Migration
      */
     public function up()
     {
-        Schema::create('diagnosa', function (Blueprint $table) {
+        Schema::create('pasien', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('pasien_id');
-            $table->integer('penyakit_id');
-            $table->integer('persentase');
+            $table->string('nama');
+            $table->text('lokasi');
+            $table->date('tgl_lahir');
+            $table->string('no_telpon');
+            $table->unsignedBigInteger('kelamin_id');     
+            $table->foreign('kelamin_id')->references('id')->on('kelamin');        
             $table->timestamps();
         });
     }
@@ -29,6 +32,6 @@ class Diagnosa extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('base_case_gejala');
+        Schema::dropIfExists('pasien');
     }
 }

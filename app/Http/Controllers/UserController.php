@@ -54,7 +54,7 @@ class UserController extends Controller
         $user->level = $request->level;
         $user->password = bcrypt($request->password);
         $user->save();
-        return redirect('/user')->with('status', 'data berhasil di simpan');
+        return redirect('/user/id')->with('status', 'data berhasil di simpan');
     }
 
     /**

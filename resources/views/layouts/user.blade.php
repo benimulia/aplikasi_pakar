@@ -9,18 +9,18 @@
   <title>Aplikasi Diagnosis Penyakit Usus</title>
 
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="{{asset('user/images/favicon.ico')}}" />
+  <link rel="shortcut icon" type="image/x-icon" href="{{asset('userx/images/favicon.ico')}}" />
 
   <!-- bootstrap.min css -->
-  <link rel="stylesheet" href="{{asset('user/plugins/bootstrap/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{asset('userx/plugins/bootstrap/css/bootstrap.min.css')}}">
   <!-- Icon Font Css -->
-  <link rel="stylesheet" href="{{asset('user/plugins/icofont/icofont.min.css')}}">
+  <link rel="stylesheet" href="{{asset('userx/plugins/icofont/icofont.min.css')}}">
   <!-- Slick Slider  CSS -->
-  <link rel="stylesheet" href="{{asset('user/plugins/slick-carousel/slick/slick.css')}}">
-  <link rel="stylesheet" href="{{asset('user/plugins/slick-carousel/slick/slick-theme.css')}}">
+  <link rel="stylesheet" href="{{asset('userx/plugins/slick-carousel/slick/slick.css')}}">
+  <link rel="stylesheet" href="{{asset('userx/plugins/slick-carousel/slick/slick-theme.css')}}">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="{{asset('user/css/style.css')}}">
+  <link rel="stylesheet" href="{{asset('userx/css/style.css')}}">
 
 
 <!-- maps -->
@@ -59,7 +59,7 @@
 	<nav class="navbar navbar-expand-lg navigation" id="navbar">
 		<div class="container">
 		 	 <a class="navbar-brand" href="index.html">
-			  	{{-- <img src="{{asset('user/images/logo.png')}}" alt="" class="img-fluid"> --}}
+			  	{{-- <img src="{{asset('userx/images/logo.png')}}" alt="" class="img-fluid"> --}}
 				  <h2>ONLINE DIAGNOSIS</h2>
 			  </a>
 
@@ -211,24 +211,24 @@
 @yield('js')
     
     <!-- Main jQuery -->
-    <script src="{{asset('user/plugins/jquery/jquery.js')}}"></script>
+    <script src="{{asset('userx/plugins/jquery/jquery.js')}}"></script>
     <!-- Bootstrap 4.3.2 -->
-    <script src="{{asset('user/plugins/bootstrap/js/popper.js')}}"></script>
-    <script src="{{asset('user/plugins/bootstrap/js/bootstrap.min.')}}js"></script>
-    <script src="{{asset('user/plugins/counterup/jquery.easing.js')}}"></script>
+    <script src="{{asset('userx/plugins/bootstrap/js/popper.js')}}"></script>
+    <script src="{{asset('userx/plugins/bootstrap/js/bootstrap.min.')}}js"></script>
+    <script src="{{asset('userx/plugins/counterup/jquery.easing.js')}}"></script>
     <!-- Slick Slider -->
-    <script src="{{asset('user/plugins/slick-carousel/slick/slick.min.js')}}"></script>
+    <script src="{{asset('userx/plugins/slick-carousel/slick/slick.min.js')}}"></script>
     <!-- Counterup -->
-    <script src="{{asset('user/plugins/counterup/jquery.waypoints.min.js')}}"></script>
+    <script src="{{asset('userx/plugins/counterup/jquery.waypoints.min.js')}}"></script>
     
-    <script src="{{asset('user/plugins/shuffle/shuffle.min.js')}}"></script>
-    <script src="{{asset('user/plugins/counterup/jquery.counterup.min.js')}}"></script>
+    <script src="{{asset('userx/plugins/shuffle/shuffle.min.js')}}"></script>
+    <script src="{{asset('userx/plugins/counterup/jquery.counterup.min.js')}}"></script>
     <!-- Google Map -->
-    {{-- <script src="{{asset('user/plugins/google-map/map.js')}}"></script>
+    {{-- <script src="{{asset('userx/plugins/google-map/map.js')}}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
      --}}
-    <script src="{{asset('user/js/script.js')}}"></script>
-    <script src="{{asset('user/js/contact.js')}}"></script>
+    <script src="{{asset('userx/js/script.js')}}"></script>
+    <script src="{{asset('userx/js/contact.js')}}"></script>
 	
 
 

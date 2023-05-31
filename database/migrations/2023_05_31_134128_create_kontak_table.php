@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Casebasegejala extends Migration
+class CreateKontakTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class Casebasegejala extends Migration
      */
     public function up()
     {
-        Schema::create('base_case_gejala', function (Blueprint $table) {
+        Schema::create('kontak', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('base_case_id');
-            $table->integer('gejala_id');
+            $table->string('link');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class Casebasegejala extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('base_case_gejala');
+        Schema::dropIfExists('kontak');
     }
 }
