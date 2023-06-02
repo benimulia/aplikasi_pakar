@@ -30,7 +30,7 @@
             <div class="col-lg-4 mx-auto">
               <h2 class="text-center mb-4">Register</h2>
               <div class="auto-form-wrapper">
-                 <form method="POST" action="{{ route('login') }}" class="register-form" id="login-form">
+                 <form method="POST" action="{{ route('register') }}" class="register-form" id="login-form">
                             @csrf
                   <div class="form-group">
                     <div class="input-group">
