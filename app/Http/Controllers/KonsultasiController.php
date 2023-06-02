@@ -168,6 +168,8 @@ class KonsultasiController extends Controller
         $prob_tertinggi = $posterior_probs[0]['probabilitas'];
         $persen_prob = $prob_tertinggi * 100;
 
+        $request->session()->flash('gejala_input', $gejala_input);
+
         DB::beginTransaction();
 
         try {
@@ -192,7 +194,7 @@ class KonsultasiController extends Controller
             // }
 
             DB::commit();
-            return redirect()->route('hasilDiagnosa', $pasien_id);
+            return redirect()->route('hasilDiagnosa', ['pasien_id' => $pasien_id, 'gejala_input' => $gejala_input]);
         } catch (Exception $e) {
             DB::rollback();
             return redirect()->back()->with('fail', 'Gagal menambahkan data');
@@ -233,11 +235,14 @@ class KonsultasiController extends Controller
         return TempDiagnosa::where('pasien_id', $pasien_id)->delete();
     }
 
-    public function hasilDiagnosa($pasien_id)
+    public function hasilDiagnosa($pasien_id, Request $request)
     {
+        $gejalainput = $request->session()->get('gejala_input');
+        $gejala = Gejala::whereIn('id', $gejalainput)->get();
         $diagnosa = Diagnosa::where('pasien_id', $pasien_id)->first();
-        return view('diagnosa', compact('diagnosa'));
+        return view('diagnosa', compact('diagnosa', 'gejala'));
     }
+
 
 
 

@@ -92,7 +92,7 @@
                             </div>
                             <div class="col-md-12">
                                 <ol>
-                                @foreach ($diagnosa->pasien->gejala as $gejala)
+                                @foreach ($gejala as $gejala)
                                     <li>{{ $gejala->name }}</li>
                                 @endforeach
                                 </ol>
