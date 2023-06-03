@@ -87,7 +87,6 @@ class KonsultasiController extends Controller
         $pasien_id = $request->pasien_id;
         $count_case = BaseCase::count();
         $penyakit_count = [];
-        $base_case = BaseCase::select('penyakit_id')->get();
 
         $penyakit_count = BaseCase::groupBy('penyakit_id')
             ->selectRaw('penyakit_id, COUNT(*) as jumlah')
@@ -100,7 +99,6 @@ class KonsultasiController extends Controller
             $ratio = $penyakit->jumlah / $count_case;
             $penyakit_ratios[$penyakit->penyakit_id] = $ratio;
         }
-
 
         // Mendapatkan gejala yang diinputkan oleh pengguna
         $gejala_input = $request->gejala;
@@ -154,8 +152,19 @@ class KonsultasiController extends Controller
         // Normalisasi probabilitas posterior
         $sum_posterior_probs = array_sum(array_column($posterior_probs, 'probabilitas'));
 
-        foreach ($posterior_probs as &$posterior) {
-            $posterior['probabilitas'] /= $sum_posterior_probs;
+        if ($sum_posterior_probs != 0) {
+            foreach ($posterior_probs as &$posterior) {
+                $posterior['probabilitas'] /= $sum_posterior_probs;
+            }
+        } else {
+            // Penanganan ketika $sum_posterior_probs = 0
+            $total_penyakit = count($penyakit_ratios);
+            $small_prob = 1e-6; // Nilai probabilitas kecil yang ditetapkan
+            $equal_prob = $small_prob / $total_penyakit;
+
+            foreach ($posterior_probs as &$posterior) {
+                $posterior['probabilitas'] = $equal_prob;
+            }
         }
 
         // Mengurutkan probabilitas posterior dari yang tertinggi ke terendah
@@ -200,6 +209,7 @@ class KonsultasiController extends Controller
             return redirect()->back()->with('fail', 'Gagal menambahkan data');
         }
     }
+
 
 
     private function hitungPersen($pasien_id)
