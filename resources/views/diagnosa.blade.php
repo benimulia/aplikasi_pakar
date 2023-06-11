@@ -134,6 +134,7 @@
                                         </div>
                                         <div class="col-md-9">
                                             <p>{{ $diagnosa->penyakit->solusis->nama_solusi }}</p>
+                                            <small>* semua data dan informasi yang disajikan didapatkan dari halodoc</small>
                                         </div>
                                     </div>
                                 </div>
